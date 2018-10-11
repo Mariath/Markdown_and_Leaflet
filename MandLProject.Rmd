@@ -1,0 +1,18 @@
+---
+title: "Markdown and Leaflet"
+author: "Mariath"
+date: "October 11, 2018"
+output: html_document
+---
+
+# My Markdown and Leaflet Project
+
+## Now I want to add my city
+```{r}
+suppressWarnings(library(leaflet))
+my_map <- leaflet() %>% 
+  addTiles()
+my_map <- my_map %>%
+  addMarkers(lat=50.45466, lng=30.5238, 
+             popup="Kyiv")
+my_map
